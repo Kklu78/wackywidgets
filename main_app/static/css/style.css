@@ -1,0 +1,17 @@
+table {
+    margin: 2rem auto;
+    font-family: arial, sans-serif;
+    width: 50%;
+}
+
+body {
+    text-align: center;
+    margin: 2rem;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #0470aa;
+  color: white;
+}
