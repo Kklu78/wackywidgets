@@ -9,8 +9,8 @@ from .forms import WidgetForm
 def home(request):
     widgets = Widget.objects.all()
     widget_form = WidgetForm()
-
-    return render(request, 'home.html', {'widgets': widgets, 'widget_form': widget_form})
+    total = sum([x.quantity for x in widgets])
+    return render(request, 'home.html', {'widgets': widgets, 'widget_form': widget_form, 'total': total})
 
 def WidgetCreate(request):
     form = WidgetForm(request.POST)

@@ -28,10 +28,17 @@
         </tr>
             
         {% endfor %}
+        <tr>
+            <td style="font-weight: bold">Total Quantity</td>
+            <td style="font-weight: bold">{{total}}</td>
+            <td style="font-weight: bold"></td>
+        </tr>
     </table>                       
         {% else %}
-            <h3>No Widgets To Show!</h3>            
+            <h3>No Widgets Exist!</h3>            
         {% endif %}
+
+        <hr style="width: 50%">
         <form action="{% url 'widget_create' %}" method="post">
             {% csrf_token %}
             <table>
