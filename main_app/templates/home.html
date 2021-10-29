@@ -39,6 +39,7 @@
         {% endif %}
 
         <hr style="width: 50%">
+        <h2>Create A Widget</h2>
         <form action="{% url 'widget_create' %}" method="post">
             {% csrf_token %}
             <table>
